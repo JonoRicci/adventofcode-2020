@@ -3,6 +3,8 @@ Day 03 - Solution 01
 
 """
 
+import math
+
 
 def main() -> None:
     """
@@ -42,29 +44,30 @@ def solve_puzzle(landscape_lines) -> None:
 
     """
 
-    heading = [
-        [1, 1],
-        [3, 1],
-        [5, 1],
-        [7, 1],
-        [1, 2]
-    ]
+    heading = [[1, 1], [3, 1], [5, 1], [7, 1], [1, 2]]
     tree_count = []
 
+    # Iterate over each given heading
     for headers in heading:
         line_trees = 0
         x_coords = 0
         y_coords = 0
 
+        # Loop through Y length of list
         while y_coords + 1 < len(landscape_lines):
+            # Current position + x direction, divided by the length of a landscape line
             x_coords = (x_coords + headers[0]) % len(landscape_lines[0])
             y_coords += headers[1]
 
-            if landscape_lines[y_coords][x_coords] == '#':
+            # If current position yeilds a tree then count it
+            if landscape_lines[y_coords][x_coords] == "#":
                 line_trees += 1
 
+        # Add up all the trees from each heading
         tree_count.append(line_trees)
         print(f"On heading {headers} I will encounter {line_trees} trees.")
+
+    print(f"All tree counts multiplied: {math.prod(tree_count)}")
 
     return tree_count
 
