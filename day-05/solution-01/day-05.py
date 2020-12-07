@@ -13,8 +13,8 @@ def main() -> None:
     list_of_ids = []
 
     # Part 01
-    part_01(boarding_passes, list_of_ids)
-    print(f"Part 01: The highest seat ID on a boarding pass is {max(list_of_ids)}")
+    highest_id = part_01(boarding_passes, list_of_ids)
+    print(f"Part 01: The highest seat ID on a boarding pass is {max(highest_id)}")
 
     # Part 02
     my_seat_id = part_02(list_of_ids)
