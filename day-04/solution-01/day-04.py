@@ -34,7 +34,7 @@ def main() -> None:
 
     print(f"Part 01: There are {valid_count} valid passports.")
 
-    # For part 02 we only examine the valid passports so far from good_passports.
+    # For part 02 we only examine the valid passports so far from VALID_PASSPORTS.
     valid_count = 0  # Reset valid count
     for passport in VALID_PASSPORTS:
         if part_02(passport):
