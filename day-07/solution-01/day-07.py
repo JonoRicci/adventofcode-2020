@@ -14,7 +14,7 @@ def main() -> None:
     # Part 01
     bags = get_num_bags(list_of_bags, "shiny gold")
     print(
-        f"Part 01: Total bag colors that contain at least one shiny gold bag is {len(bags)}."
+        f"Part 01: Total bag colours that contain at least one shiny gold bag is {len(bags)}."
     )
 
     # Part 02

@@ -39,7 +39,7 @@ def get_part02(all_instructions: list) -> tuple[int, bool]:
     """
     Iterate over first-time executions, using if elif to execute instructions.
 
-    :return:
+    :return: Accumulator total and boolean on status
     :rtype: tuple of int and bool
     """
     acc = 0
