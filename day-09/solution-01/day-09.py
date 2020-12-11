@@ -16,7 +16,9 @@ def main() -> None:
     print(f"Part 01: The invalid number is {invalid_number}.")
 
     # Part 02
-    print(f"Part 02: The encryption weakness number is {get_encryption_weakness(data_stream, invalid_number)}.")
+    print(
+        f"Part 02: The encryption weakness number is {get_encryption_weakness(data_stream, invalid_number)}."
+    )
 
 
 def get_encryption_weakness(data_stream: list, invalid_number: int) -> int:
@@ -58,7 +60,7 @@ def get_invalid_number(data_stream: list) -> int:
     :rtype: int
     """
     for i in range(25, len(data_stream)):
-        preamble = data_stream[i - 25: i]
+        preamble = data_stream[i - 25 : i]
         number = data_stream[i]
         found = False
 
